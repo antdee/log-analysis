@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 # -*- coding: ascii -*-
 
 """
@@ -68,10 +68,10 @@ def report_1():
     """Scan the tables articles, log. Replace the log.path to remove /article/
        use it as a common key and take the views count from the log table."""
     # try:
-    print "\nReport 1"
-    print "What are the most popular three articles of all time?\n"
+    print("\nReport 1")
+    print("What are the most popular three articles of all time?\n")
     for n in connect(DBNAME, query_1):
-        print "Article ", n[0], " has ", n[1], "number of views"
+        print("Article %s has %s number of views" % (n[0], n[1]))
     # except:
         # print "An unknown error has occured"
 
@@ -81,10 +81,10 @@ def report_2():
        use it as a common key and take the views count from the log table.
        Group by authors.name to get the desired result."""
     # try:
-    print "\nReport 2"
-    print "Who are the most popular article authors of all time?\n"
+    print("\nReport 2")
+    print("Who are the most popular article authors of all time?\n")
     for n in connect(DBNAME, query_2):
-        print n[1], "number of views for author ", n[0]
+        print("%s number of views for author %s" % (n[1], n[0]))
     # except:
         # print "An unknown error has occured"
 
@@ -95,10 +95,10 @@ def report_3():
        Calculate percentage of errors in views per day.
        Display above selected threshold"""
     # try:
-    print "\nReport 3"
-    print "On which days did more than 1% of requests lead to errors?\n"
+    print("\nReport 3")
+    print("On which days did more than 1% of requests lead to errors?\n")
     for n in connect(DBNAME, query_3):
-        print n[0], " ", n[1], "% of the requests led to errors"
+        print("%s %s%% of the requests led to errors" % (n[0], n[1]))
     # except:
         # print "An unknown error has occured"
 

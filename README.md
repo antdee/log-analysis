@@ -14,7 +14,7 @@ After getting the data loaded, you can test viewing the tables using commands li
 - The `articles` table includes the articles themselves.
 - The `log table` includes one entry for each time a user has accessed the site.
 
-You should run `log_analysis.py` from the directory in whick the `news` database is located in.
+You should run `log_analysis.py` from the directory in which the `news` database is located in.
 
 ## Database tables
 There are 3 tables on the *news* Database and here is a list the important data for
